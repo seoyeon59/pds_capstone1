@@ -1,4 +1,4 @@
-크롤링 사이트 : Carmax (https://www.carmax.com/cars)
+크롤링 사이트 : Carmax <https://www.carmax.com/cars>
 
 이 사이트는 미국의 유명 중고차 사이트로 현재는 사이트에서 미국 이외의 지역에서 접속하지 못하게 막았다.
 
