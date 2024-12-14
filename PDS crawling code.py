@@ -10,14 +10,11 @@ import pandas as pd
 # 브라우저 한 번만 열기
 browser = webdriver.Chrome()
 # 크라우저 설정 : 차 종별 url 바꿔서 넣기
-# url
-# 현재 사이트가 해외 접속 불가와 다운되어 6개의 url 중 남은 url이 3개입니다.
+# url(현재 사이트가 해외 접속 불가와 다운되어 6개의 url 중 남은 url이 3개입니다.) :
 # https://www.carmax.com/cars/suvs
 # https://www.carmax.com/cars/pickup-trucks
 # https://www.carmax.com/cars/minivans-and-vans
-#
-#
-#
+
 browser.get("https://www.carmax.com/cars/pickup-trucks")
 time.sleep(1)
 
