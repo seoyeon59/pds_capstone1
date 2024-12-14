@@ -1,4 +1,5 @@
-* preprocessing_code_1 와 preprocessing_code_2 는 크롤링한 csv 파일들 하나씩 처리하는 방식이며, preprocessing_code_3은크롤링 한 모든 파일들을 합쳐서 하나의 파일로 묶는 코드이다. 숫자의 순서대로 코드를 실행하면 된다.
+preprocessing_code_1 와 preprocessing_code_2 는 크롤링한 csv 파일들 하나씩 처리하는 방식이며, preprocessing_code_3은크롤링 한 모든 파일들을 합쳐서 하나의 파일로 묶는 코드이다. 숫자의 순서대로 코드를 실행하면 된다.
+
 ----
 ### preprocessing_code_1 : 첫 번째 단계 (자동차 기본 정보에 대한 전처리)
 1. 우선 필요없는 열([horsepower', 'front_tire_size', 'prior_use', 'keys')을 식제 시킨다. 삭제시킨 열의 기준은 행에 결측치가 많거나 값이 모두 같은 등 중고차 가격에 영향을 많이 미치지 않을 열들이다.
