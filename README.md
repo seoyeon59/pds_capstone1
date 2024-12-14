@@ -7,7 +7,7 @@
 - 중고차 이력 정보 : 서비스 및 수리 이력, 보험 이력, 사고 이력
 - 종속변수 : 중고차 가격
 
-이용 사이트 : [Carmax](https://www.carmax.com/cars) 
+이용 사이트 : [Carmax](https://www.carmax.com/cars) (현재 사이트에서 미국 이외 ip 접속을 막아둠)
 
 
 ### ⚙️개발 환경
