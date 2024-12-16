@@ -12,9 +12,11 @@
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
 
 ### 멤버
-김지윤
-전서연
-전민경
+김지윤 (서울여대 수학과)
+
+전서연 (서울여대 데이터사이언스학과)
+
+전민경 (서울여대 데이터사이언스학과)
 
 ---
 ### clawler 요약 설명
@@ -69,4 +71,3 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 - R² < 0 : 모델이 실제값 평균보다도 예측이 나쁨.
 - Overfitting 확인:훈련 데이터 R² 값이 높고, 테스트 데이터 R² 값이 낮으면 모델이 과적합(overfitting) 되었을 가능성이 있습니다.
 - Underfitting 확인: 두 값 모두 낮으면 모델이 과소적합(underfitting) 되었을 가능성이 있습니다.
-
