@@ -13,8 +13,17 @@
 ### ⚙️개발 환경
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
 
+### 멤버
+김지윤
+전서연
+전민경
 
 ---
+### clawler 요약 설명
+
+
+---
+### processing 요약 설명
 
 ---
 ### resouse 요약 설명
@@ -30,3 +39,4 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 3. 독립변수들 중에서 상관계수가 큰 것들끼리의 분포를 확인한다.
 
 ---
+### machinlearning 요약 설명
