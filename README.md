@@ -7,8 +7,6 @@
 - 중고차 이력 정보 : 서비스 및 수리 이력, 보험 이력, 사고 이력
 - 종속변수 : 중고차 가격
 
-이용 사이트 : [Carmax](https://www.carmax.com/cars) (현재 사이트에서 미국 이외 ip 접속을 막아둠)
-
 
 ### ⚙️개발 환경
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
@@ -20,7 +18,12 @@
 
 ---
 ### clawler 요약 설명
+크롤링 사이트 : Carmax <https://www.carmax.com/cars>
 
+이 사이트는 미국의 유명 중고차 사이트로 현재는 사이트에서 미국 이외의 지역에서 접속하지 못하게 막았다.
+
+현재 resource에 업로드 된 크로링 한 데이터는 2023년 11월 ~ 12월에 실시된 자료입니다. 
+크롤링 중 코드도 중간 수정을 하여 csv 파일들이 약간 다를 수 있습니다.
 
 ---
 ### processing 요약 설명
