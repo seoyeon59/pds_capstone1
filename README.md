@@ -10,11 +10,12 @@
 
 ### ⚙️개발 환경
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
+<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=github&logoColor=white">
 
 ### 🙋‍♀️멤버
 김지윤 (서울여대 수학과)
 
-전서연 (서울여대 데이터사이언스학과 2023111810)
+전서연 (서울여대 데이터사이언스학과)
 
 전민경 (서울여대 데이터사이언스학과)
 
