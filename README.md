@@ -86,7 +86,9 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 ```xgb_params = {'n_estimators':[1000]}
 xgb_reg = XGBRegressor(n_estimators=1000, learning_rate=0.05,
                        colsample_bytree=0.5, subsample=0.8)
-best_xgb = print_best_params(xgb_reg, xgb_params)```
+best_xgb = print_best_params(xgb_reg, xgb_params)
+```
+
 
 
 #### LGBMRegressor
@@ -97,7 +99,9 @@ best_xgb = print_best_params(xgb_reg, xgb_params)```
 ```lgbm_params = {'n_estimators':[1000]}
 lgbm_reg = LGBMRegressor(n_estimators=1000, learning_rate=0.05, num_leaves=4,
                          subsample=0.6, colsample_bytree=0.4, reg_lambda=10, n_jobs=-1)
-best_lgbm = print_best_params(lgbm_reg, lgbm_params)```
+best_lgbm = print_best_params(lgbm_reg, lgbm_params)
+```
+
 
 
 #### <추가 설명>
