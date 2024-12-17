@@ -83,6 +83,12 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 - 병렬 처리를 사용하기에 학습과 분류가 빠르고 다른 알고리즘과 연계하여 앙상블 학습이 가능하다.
 - Y = w1 * M(x)+ w2 * G(x)+ w3 * H(x) + error
 
+# 코드
+```xgb_params = {'n_estimators':[1000]}
+xgb_reg = XGBRegressor(n_estimators=1000, learning_rate=0.05,
+                       colsample_bytree=0.5, subsample=0.8)
+best_xgb = print_best_params(xgb_reg, xgb_params)```
+
 
 #### LGBMRegressor
 - 데이터에 가중치를 부여하여 모델을 학습시키는 모델을 학습시키는 부스팅 계열의 트리 모델이다.
