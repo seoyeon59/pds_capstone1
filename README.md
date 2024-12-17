@@ -19,7 +19,7 @@
 전민경 (서울여대 데이터사이언스학과 2022111159)
 
 ### 발전 내용
-기존에는 heatmap을 이용하여 상관관계만 나타내었습니다. 이에 더 발전하여 상관계수가 높은 것끼리 산점도로 나타냈으며, 여러 모델링(선형회귀모델(lr,ridge,lasso), 회귀모델 성능향상을 위한 앙상블(XGBRegressor, LGBMRegressor))을 진행하였다.
+기존에는 heatmap을 이용하여 상관관계만 나타내었습니다. 이에 더 발전하여 상관계수가 높은 것끼리 산점도로 나타냈으며, 여러 모델링(선형회귀모델(LineerRegression,Ridge,Lasso), 회귀모델 성능향상을 위한 앙상블(XGBRegressor, LGBMRegressor)을 진행하였다.
 
 ---
 ### clawler 요약 설명
@@ -64,17 +64,16 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 ### machinlearning 요약 설명
 #### 사용한 모델
 ##### LinearRegression
+- LinearRgression은 어떠한 독립 변수들과 종속 변수간의 관계를 예측할 때, 그 사이 관계를 선형 관계(1차 함수)로 가정하고, 모델링하는 지도 학습 알고리즘이다.
+- LinearRgression은 보통, 인자와 결과 간의 대략적인 관계 해석이나 예측에 활용된다.
+- Y=aX+b (Y : 종속 변수)
 
-
-##### Ridgie
-
-
-
-##### Lasso
+##### Ridgi와 Lasso
 
 
 
 ##### XGBRegressor
+
 
 
 ##### LGBMRegressor
@@ -82,11 +81,11 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 
 
 
-#### RMSE : 평균 제곱근 오차
+##### RMSE : 평균 제곱근 오차
 - 값이 작을수록 모델의 예측이 실제값에 더 가깝다는 것을 의미합니다.
 - RMSE는 오차를 제곱하므로 큰 오차에 더 큰 페널티를 부여합니다.
 
-#### R² : 결정 계수
+##### R² : 결정 계수
 - R² = 1 :  완벽한 예측.
 - R² = 0 :  모델이 실제값의 평균만큼도 예측하지 못함
 - R² < 0 : 모델이 실제값 평균보다도 예측이 나쁨.
