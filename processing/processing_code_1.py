@@ -70,5 +70,5 @@ def divide_columns(row):
 df['torque'] = df.apply(divide_columns, axis=1)
 
 # 결과를 새로운 CSV 파일로 저장
-df.to_csv('coupes_prepro_1.csv', index=False)
+df.to_csv('coupes_prepro_1.csv', index=False) # 파일명 : 차종_prepro_1.csv
 print(f"특정 열이 제거된 CSV 파일로 저장되었습니다.")
