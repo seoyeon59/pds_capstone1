@@ -35,6 +35,7 @@ def get_rmse(model):
     print('{0} 로그 변환된 RMSE: {1}'.format(model.__class__.__name__,np.round(rmse, 3)))
     return rmse
 
+# RMSE 계산을 위한 함수
 def get_rmses(models):
     rmses = [ ]
     for model in models:
@@ -53,16 +54,13 @@ y_target_log = np.log1p(y)
 X_train, X_test, y_train, y_test = train_test_split(X_2, y_target_log, test_size=0.2, random_state=156)
 
 # LinearRegression 학습
-lr_reg = LinearRegression()
-lr_reg.fit(X_train, y_train)
+lr_reg = LinearRegression().fit(X_train, y_train)
 
 # Ridge 학습
-ridge_reg = Ridge()
-ridge_reg.fit(X_train, y_train)
+ridge_reg = Ridge().fit(X_train, y_train)
 
 # Lasso 학습
-lasso_reg = Lasso()
-lasso_reg.fit(X_train, y_train)
+lasso_reg = Lasso().fit(X_train, y_train)
 
 # RMSE : 평균 제곱근 오차
 models = [lr_reg, ridge_reg, lasso_reg]
@@ -147,10 +145,8 @@ def visualize_coefficient(models):
 # 앞의 최적화 alpha값으로 학습데이터로 학습, 테스트 데이터로 예측 및 평가 수행
 # print_best_params 함수의 return 값 바탕으로 파라미터를 찾아서 수정 필요
 lr_reg = LinearRegression().fit(X_train, y_train)
-ridge_reg = Ridge(alpha=20)
-ridge_reg.fit(X_train, y_train)
-lasso_reg = Lasso(alpha=0.005)
-lasso_reg.fit(X_train, y_train)
+ridge_reg = Ridge(alpha=20).fit(X_train, y_train)
+lasso_reg = Lasso(alpha=0.005).fit(X_train, y_train)
 
 # 모든 모델의 RMSE 출력
 models = [lr_reg, ridge_reg, lasso_reg]
@@ -194,19 +190,16 @@ lasso_params = { 'alpha':[0.001, 0.005, 0.008, 0.05, 0.03, 0.1, 0.5, 1,5, 10] }
 best_rige = print_best_params(ridge_reg, ridge_params)
 best_lasso = print_best_params(lasso_reg, lasso_params)
 
-
-# 앞의 최적화 alpha값으로 학습데이터로 학습, 테스트 데이터로 예측 및 평가 수행. 
+# 앞의 최적화 alpha값으로 학습데이터로 학습, 테스트 데이터로 예측 및 평가 수행
+# print_best_params 함수의 return 값 바탕으로 파라미터를 찾아서 수정 필요
 # LinearRegression 학습
-lr_reg = LinearRegression()
-lr_reg.fit(X_train, y_train)
+lr_reg = LinearRegression().fit(X_train, y_train)
 
 # Ridge 학습
-ridge_reg = Ridge(alpha=20)
-ridge_reg.fit(X_train, y_train)
+ridge_reg = Ridge(alpha=20).fit(X_train, y_train)
 
 # Lasso 학습
-lasso_reg = Lasso(alpha=0.005)
-lasso_reg.fit(X_train, y_train)
+lasso_reg = Lasso(alpha=0.005).fit(X_train, y_train)
 
 # 모든 모델의 RMSE 출력
 models = [lr_reg, ridge_reg, lasso_reg]
@@ -234,7 +227,7 @@ lgbm_reg = LGBMRegressor(n_estimators=1000, learning_rate=0.05, num_leaves=4,
                          subsample=0.6, colsample_bytree=0.4, reg_lambda=10, n_jobs=-1)
 best_lgbm = print_best_params(lgbm_reg, lgbm_params)
 
-
+# RMSE 계산을 위한 함수
 def get_rmse_pred(preds):
     for key in preds.keys():
         pred_value = preds[key]
@@ -243,11 +236,9 @@ def get_rmse_pred(preds):
         print('{0} 모델의 RMSE: {1}'.format(key, rmse))
 
 # 개별 모델의 학습
-ridge_reg = Ridge(alpha=8)
-ridge_reg.fit(X_train, y_train)
-
-lasso_reg = Lasso(alpha=0.001)
-lasso_reg.fit(X_train, y_train)
+# alpha 파라미트 수정
+ridge_reg = Ridge(alpha=8).fit(X_train, y_train)
+lasso_reg = Lasso(alpha=0.001).fit(X_train, y_train)
 
 # 개별 모델 예측
 ridge_pred = ridge_reg.predict(X_test)
@@ -258,6 +249,7 @@ pred = 0.4 * ridge_pred + 0.6 * lasso_pred
 preds = {'최종 혼합': pred,
          'Ridge': ridge_pred,
          'Lasso': lasso_pred}
+
 #최종 혼합 모델, 개별모델의 RMSE 값 출력
 get_rmse_pred(preds)
 
