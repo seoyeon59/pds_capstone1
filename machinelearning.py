@@ -8,6 +8,7 @@ import seaborn as sns
 df=pd.read_csv("all_cars.csv")
 
 ### 사이킷런은 파이썬에서 머신러닝 분석을 할 때 유용하게 사용할 수 있는 라이브러리 입니다. 여러가지 머신러닝 모듈로 구성되어있습니다.
+# StandardScaler을 진행하기 위한 라이브러리 불러오기
 from sklearn.preprocessing import StandardScaler
 #sklearn: 머신러닝 알고리즘 zip
 #sklearn의 preprocessing(전처리)의 StandardScaler
@@ -96,9 +97,10 @@ models = [lr_reg, ridge_reg, lasso_reg]
 get_avg_rmse_cv(models)
 
 
-# 하이퍼파라미터 튜닝
+# 하이퍼파라미터 튜닝을 위한 라이브러리 불러오기기
 from sklearn.model_selection import GridSearchCV
 
+# 하이퍼파라미터 튜닝
 def print_best_params(model, params):
     grid_model = GridSearchCV(model, param_grid=params, 
                               scoring='neg_mean_squared_error', cv=5)
