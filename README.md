@@ -66,7 +66,7 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 #### LinearRegression
 - LinearRgression은 어떠한 독립 변수들과 종속 변수간의 관계를 예측할 때, 그 사이 관계를 선형 관계(1차 함수)로 가정하고, 모델링하는 지도 학습 알고리즘이다.
 - LinearRgression은 보통, 인자와 결과 간의 대략적인 관계 해석이나 예측에 활용된다.
-- Y=aX+b (Y : 종속 변수)
+- $$ \hat{y} = \sum_{i=1}^n{W_ix_i} + b$$
 - 다중 회귀 모형은 과적합(overfitting)되는 경향이 존재한다.
 
 
