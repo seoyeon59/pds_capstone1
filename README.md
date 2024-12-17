@@ -76,6 +76,24 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
   
 - lasso와 ridge는 선형 회귀의 단점을 보완해 범용성을 제공한다.
 
+  
+#### 하이퍼파라미터 튜닝
+
+```python
+# 라이브러리 불러오기
+from sklearn.model_selection import GridSearchCV
+
+# 하이퍼파라미터 튜닝
+def print_best_params(model, params):
+    grid_model = GridSearchCV(model, param_grid=params, 
+                              scoring='neg_mean_squared_error', cv=5)
+    grid_model.fit(X_2, y_target_log)
+    rmse = np.sqrt(-1* grid_model.best_score_)
+    print('{0} 5 CV 시 최적 평균 RMSE 값: {1}, 최적 alpha:{2}'.format(model.__class__.__name__,
+                                        np.round(rmse, 4), grid_model.best_params_))
+    return grid_model.best_estimator_
+```
+
 
 #### XGBRegressor
 - 여러 개의 결정 트리를 임의적으로 학습하는 부스팅 계열의 트리 모델이다.
