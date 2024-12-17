@@ -1,11 +1,12 @@
-# 시각화 1
+# 시각화
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# 데이터 불러오기
 df=pd.read_csv("all_cars.csv")
 
-df.info()
+df.info() # info 확인
 
 df["Price"].describe()
 df["Price"].hist(bins=50)
