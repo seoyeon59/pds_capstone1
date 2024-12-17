@@ -83,7 +83,6 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 - 병렬 처리를 사용하기에 학습과 분류가 빠르고 다른 알고리즘과 연계하여 앙상블 학습이 가능하다.
 - Y = w1 * M(x)+ w2 * G(x)+ w3 * H(x) + error
 
-# 코드
 ```xgb_params = {'n_estimators':[1000]}
 xgb_reg = XGBRegressor(n_estimators=1000, learning_rate=0.05,
                        colsample_bytree=0.5, subsample=0.8)
@@ -94,6 +93,11 @@ best_xgb = print_best_params(xgb_reg, xgb_params)```
 - 데이터에 가중치를 부여하여 모델을 학습시키는 모델을 학습시키는 부스팅 계열의 트리 모델이다.
 - 과적합 규제 기능(Regularization), 자체 교차 검증 알고리즘, 결측치 처리 기능의 이점이 있다.
 - 리프 중심 트리 분할 방식으로 비대칭적인 트리를 형성하여 모델을 학습하고, 예측 오류 손실을 최소화 한다.
+
+```lgbm_params = {'n_estimators':[1000]}
+lgbm_reg = LGBMRegressor(n_estimators=1000, learning_rate=0.05, num_leaves=4,
+                         subsample=0.6, colsample_bytree=0.4, reg_lambda=10, n_jobs=-1)
+best_lgbm = print_best_params(lgbm_reg, lgbm_params)```
 
 
 #### <추가 설명>
