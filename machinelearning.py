@@ -110,12 +110,13 @@ def print_best_params(model, params):
                                         np.round(rmse, 4), grid_model.best_params_))
     return grid_model.best_estimator_
 
+# 최적의 파라미터 찾기
 ridge_params = { 'alpha':[0.05, 0.1, 1, 5, 8, 10, 12, 15, 20] }
 lasso_params = { 'alpha':[0.001, 0.005, 0.008, 0.05, 0.03, 0.1, 0.5, 1,5, 10] }
 best_rige = print_best_params(ridge_reg, ridge_params)
 best_lasso = print_best_params(lasso_reg, lasso_params)
 
-
+# coef 영향이 큰 이상치 제거거
 def get_top_bottom_coef(model):
     # coef_ 속성을 기반으로 Series 객체를 생성. index는 컬럼명. 
     coef = pd.Series(model.coef_, index=X_2.columns)
@@ -143,9 +144,9 @@ def visualize_coefficient(models):
         sns.barplot(x=coef_concat.values, y=coef_concat.index , ax=axs[i_num])
 
 
-# 앞의 최적화 alpha값으로 학습데이터로 학습, 테스트 데이터로 예측 및 평가 수행. 
-lr_reg = LinearRegression()
-lr_reg.fit(X_train, y_train)
+# 앞의 최적화 alpha값으로 학습데이터로 학습, 테스트 데이터로 예측 및 평가 수행
+# print_best_params 함수의 return 값 바탕으로 파라미터를 찾아서 수정 필요
+lr_reg = LinearRegression().fit(X_train, y_train)
 ridge_reg = Ridge(alpha=20)
 ridge_reg.fit(X_train, y_train)
 lasso_reg = Lasso(alpha=0.005)
@@ -162,7 +163,6 @@ visualize_coefficient(models)
 # LinearRegression 학습 점수 확인
 print(lr_reg.score(X_train, y_train))  # training set
 print(lr_reg.score(X_test, y_test))
-
 
 # Ridge 학습 점수 확인
 print(ridge_reg.score(X_train, y_train))  # training set
@@ -184,7 +184,6 @@ skew_features = df[features_index].apply(lambda x : skew(x))
 skew_features_top = skew_features[skew_features > 1]
 print(skew_features_top.sort_values(ascending=False))
 
-
 df[skew_features_top.index] = np.log1p(df[skew_features_top.index])
 
 # train set과 test set 나누기 (8:2)
@@ -205,7 +204,7 @@ lr_reg.fit(X_train, y_train)
 ridge_reg = Ridge(alpha=20)
 ridge_reg.fit(X_train, y_train)
 
-# Lasso 학습습
+# Lasso 학습
 lasso_reg = Lasso(alpha=0.005)
 lasso_reg.fit(X_train, y_train)
 
@@ -218,7 +217,7 @@ models = [lr_reg, ridge_reg, lasso_reg]
 visualize_coefficient(models)
 
 
-# 회귀트리 학습/예측/평가
+# 회귀트리 모델링을 진행하기 위한 라이브러리 불러오기
 from xgboost import XGBRegressor
 
 xgb_params = {'n_estimators':[1000]}
@@ -227,6 +226,7 @@ xgb_reg = XGBRegressor(n_estimators=1000, learning_rate=0.05,
 best_xgb = print_best_params(xgb_reg, xgb_params)
 
 
+# 앙상블 모델링을 위한 라이브러리 불러오기
 from lightgbm import LGBMRegressor
 
 lgbm_params = {'n_estimators':[1000]}
