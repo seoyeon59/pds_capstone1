@@ -8,12 +8,11 @@ df=pd.read_csv("all_cars.csv")
 
 df.info() # info 확인
 
-df["Price"].describe()
-df["Price"].hist(bins=50)
+print(df["Price"].describe()) # Price의 기초 통계량 확인
+df["Price"].hist(bins=50) # Price를 히스토그램으로 확인
+#### 가격이 20000달러~30000달러에 가장 많이 형성되어 있는 것을 알 수 있음
 
-# #### 가격이 20000달러~30000달러에 가장 많이 형성되어 있는 것을 알 수 있음
-print(df.columns)
-df.info()
+print(df.columns) # df의 컬럼을 리스트로 확인 
 
 num_cols=["Price",'Mile','Ages','Service_repairs','fuel_capacity','wheelbase','dirver_leg_room',
          'dirver_head_room','curb_weight','dimension_L','dimension_W','dimension_H','mile_per_gallon_city',
@@ -37,36 +36,36 @@ plt.show()
 ### 가격과 상관 관계가 큰 X변수들 : engine_cly(0.59), engine_L(0.58),Mile(-0.57)
 # 가격과 가장 상관 계수가 큰 컷들 따로 시각화해서 보기
 
-### scatter plot
+### scatter plot (engine_cly(엔진 실린더)와 가격의 관계)
 sns.scatterplot(data=df, x='engine_cly', y='Price', markers='o', color='blue', alpha=0.6)
 plt.title('Scatter Plot')
 plt.show()
 
-### scatter plot
+### scatter plot (engine_L(엔진의 리터)와 가격의 관계)
 sns.scatterplot(data=df, x='engine_L', y='Price', markers='o', color='blue', alpha=0.6)
 plt.title('Scatter Plot')
 plt.show()
 
-### scatter plot
+### scatter plot (Mile(마일)과 가격의 관계)
 sns.scatterplot(data=df, x='Mile', y='Price', markers='o', color='blue', alpha=0.6)
 plt.title('Scatter Plot')
 plt.show()
 
-### scatter plot
+### scatter plot (Ages(연식)과 가격의 관계)
 sns.scatterplot(data=df, x='Ages', y='Price', markers='o', color='blue', alpha=0.6)
 plt.title('Ages & Price')
 plt.show()
 
 ## 독립변수들 중에서 상관 계수 큰 것들끼리 분포 확인
 
-### scatter plot
+### scatter plot (wheelbase(차축)과 dimension_L(차의 하측 치수)의 관계)
 sns.scatterplot(data=df, x='wheelbase', y='dimension_L', markers='o', color='blue', alpha=0.6)
 #plt.title('scatter plot')
 plt.xlabel("wheelbase(inch)", fontsize=20)
 plt.ylabel("Price($)", fontsize=20)
 plt.show()
 
-### scatter plot
+### scatter plot (engine_cly(엔진 실린더)와 engine_L(엔진 리터)의 관계)
 sns.scatterplot(data=df, x='engine_cly', y='engine_L', markers='o', color='blue', alpha=0.6)
 #plt.title('Scatter Plot')
 plt.xlabel("engine_cly", fontsize=20)
