@@ -20,7 +20,7 @@
 
 
 ### 💻발전 내용
-기존에는 heatmap을 이용하여 상관관계만 나타내었다. 이에 더 발전하여 상관계수가 높은 것끼리 산점도로 나타냈으며, 여러 모델링(선형회귀모델(LineerRegression,Ridge,Lasso), 회귀모델 성능향상을 위한 앙상블(XGBRegressor, LGBMRegressor))을 진행하였다
+기존에는 heatmap을 이용하여 상관관계만 나타내었다. 이에 더 발전하여 상관계수가 높은 것끼리 산점도로 나타냈으며, 여러 모델링(선형회귀모델(LineerRegression,Ridge,Lasso), 회귀모델 성능향상을 위한 앙상블(XGBRegressor, LGBMRegressor))을 진행하였다.
 
 ---
 ### clawler 요약 설명
