@@ -71,8 +71,7 @@ print(df6.columns)
 ## 여러 개의 DataFrame을 합치기
 result_df = pd.concat([df1, df2, df3, df4, df5, df6], ignore_index=True)
 
-# 열의 이름 교페
-
+# 열의 이름 교체
 old_cols = ['Name', 'Price', 'Mileage', 'ages', 'accident_damages', 'Insurance',
        'service_repairs', 'fuel_capacity', 'wheelbase', 'dirver_leg_room',
        'dirver_head_room', 'cargo_capacity', 'curb_weight', 'towing_capacity',
@@ -97,4 +96,4 @@ print(result_df)
 result_df.info()
 
 # csv 파일 만들기
-result_df.to_csv("all_cars.csv", index=False)
+result_df.to_csv("all_cars.csv", index=False) # 데아터 분석을 위한 최종 파일일
