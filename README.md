@@ -19,7 +19,7 @@
 전민경 (서울여대 데이터사이언스학과 2022111159)
 
 ### 발전 내용
-기존에는 heatmap을 이용하여 상관관계만 나타내었습니다. 이에 더 발전하여 상관계수가 높은 것끼리 산점도로 나타냈으며, 여러 모델링(선형회귀모델(LineerRegression,Ridge,Lasso), 회귀모델 성능향상을 위한 앙상블(XGBRegressor, LGBMRegressor)을 진행하였다.
+기존에는 heatmap을 이용하여 상관관계만 나타내었습니다. 이에 더 발전하여 상관계수가 높은 것끼리 산점도로 나타냈으며, 여러 모델링(선형회귀모델(LineerRegression,Ridge,Lasso), 회귀모델 성능향상을 위한 앙상블(XGBRegressor, LGBMRegressor))을 진행하였다
 
 ---
 ### clawler 요약 설명
@@ -71,6 +71,7 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 
 ##### Ridgi와 Lasso
 <image src='https://github.com/user-attachments/assets/e49cee02-d785-4d86-a6f9-e40925eac050'>
+  
 - lasso와 ridge는 선형 회귀의 단점을 보완해 범용성을 제공
 
 ##### XGBRegressor
