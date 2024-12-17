@@ -62,7 +62,7 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 
 ---
 ### machinlearning 요약 설명
-#### <사용한 모델>
+#### <모델 및 주요 함수 설명>
 #### LinearRegression
 - LinearRgression은 어떠한 독립 변수들과 종속 변수간의 관계를 예측할 때, 그 사이 관계를 선형 관계(1차 함수)로 가정하고, 모델링하는 지도 학습 알고리즘이다.
 - LinearRgression은 보통, 인자와 결과 간의 대략적인 관계 해석이나 예측에 활용된다.
