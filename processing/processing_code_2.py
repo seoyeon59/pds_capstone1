@@ -1,8 +1,9 @@
 # step 2
 import pandas as pd
 
-df=pd.read_csv('suv_prepro_1.csv')   #suv, coupes 다시 돌리기
-# 인덱스가 있는 csv 파일들만 이 코드를 실행한다
+df=pd.read_csv('suv_prepro_1.csv')
+
+# 파일을 확인 후 인덱스가 있는 csv 파일들만 이 코드를 실행한다. 
 # df = df.drop(df.columns[0], axis=1)
 
 ## ages
@@ -171,4 +172,4 @@ df['torque'] = df['torque'].round(1)
 # print(df['torque'])
 
 # 새로운 csv 파일로 만들기
-df.to_csv("suv_prepro_2.csv", index=False)
+df.to_csv("suv_prepro_2.csv", index=False) # 파일명 : 차종_prepro_2.csv
