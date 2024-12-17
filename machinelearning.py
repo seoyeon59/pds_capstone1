@@ -26,8 +26,8 @@ print(df[x_2_cols].head()) # 결과의 일부(앞부분) 확인
 X_2 = df[x_2_cols]
 y = df['Price']
 
-
 # 선형회귀 모델의 학습/예측/평가
+# RMSE 계산을 위한 함수
 def get_rmse(model):
     pred = model.predict(X_test)
     mse = mean_squared_error(y_test , pred)
@@ -67,14 +67,14 @@ models = [lr_reg, ridge_reg, lasso_reg]
 print(get_rmses(models))
 
 # 모델의 R² (결정 계수) 값
-print(lr_reg.score(X_train, y_train))  # training set
-print(lr_reg.score(X_test, y_test))
+print('LinearRegression train score :',lr_reg.score(X_train, y_train))  # training set
+print('LinearRegression test score :',lr_reg.score(X_test, y_test))
 
-print(ridge_reg.score(X_train, y_train))  # training set
-print(ridge_reg.score(X_test, y_test))
+print('Ridge train score :',ridge_reg.score(X_train, y_train))  # training set
+print('Ridge test score :', ridge_reg.score(X_test, y_test))
 
-print(lasso_reg.score(X_train, y_train))  # training set
-print(lasso_reg.score(X_test, y_test))
+print('Lasso train score',lasso_reg.score(X_train, y_train))  # training set
+print('Lasso test score', lasso_reg.score(X_test, y_test))
 
 
 # 교차 검증을 위한 라이브러리 불러오기기
@@ -157,16 +157,16 @@ models = [lr_reg, ridge_reg, lasso_reg]
 visualize_coefficient(models)
 
 # LinearRegression 학습 점수 확인
-print(lr_reg.score(X_train, y_train))  # training set
-print(lr_reg.score(X_test, y_test))
+print('LinearRegression train score',lr_reg.score(X_train, y_train))  # training set
+print('LinearRegression test score', lr_reg.score(X_test, y_test))
 
 # Ridge 학습 점수 확인
-print(ridge_reg.score(X_train, y_train))  # training set
-print(ridge_reg.score(X_test, y_test))
+print('Ridge train score', ridge_reg.score(X_train, y_train))  # training set
+print('Ridge test score', ridge_reg.score(X_test, y_test))
 
 # Lasso 학습 점수 확인
-print(lasso_reg.score(X_train, y_train))  # training set
-print(lasso_reg.score(X_test, y_test))
+print('Lasso train score', lasso_reg.score(X_train, y_train))  # training set
+print('Lasso test score', lasso_reg.score(X_test, y_test))
 
 
 # 왜곡 정도 확인하기 위한 라이브러리 불러오기
@@ -273,10 +273,10 @@ preds = {'최종 혼합': pred,
 get_rmse_pred(preds)
 
 # XGBRegressor 학습 점수 확인
-print(xgb_reg.score(X_train, y_train))  # training set
-print(xgb_reg.score(X_test, y_test))
+print('XGBRegressor train score :',xgb_reg.score(X_train, y_train))  # training set
+print('XGBRegressor test score :', xgb_reg.score(X_test, y_test))
 
 # LGBMRegressor 학습 점수 확인
-print(lgbm_reg.score(X_train, y_train))  # training set
-print(lgbm_reg.score(X_test, y_test))
+print('LGBMRegressor train score :',lgbm_reg.score(X_train, y_train))  # training set
+print('LGBMRegressor test score :',lgbm_reg.score(X_test, y_test))
 
