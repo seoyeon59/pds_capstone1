@@ -74,7 +74,7 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 #### Ridgi와 Lasso
 <image src='https://github.com/user-attachments/assets/e49cee02-d785-4d86-a6f9-e40925eac050'>
   
-- lasso와 ridge는 선형 회귀의 단점을 보완해 범용성을 제공
+- lasso와 ridge는 선형 회귀의 단점을 보완해 범용성을 제공한다.
 
 
 #### XGBRegressor
@@ -92,14 +92,14 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 
 #### <추가 설명>
 #### RMSE : 평균 제곱근 오차
-- 값이 작을수록 모델의 예측이 실제값에 더 가깝다는 것을 의미합니다.
-- RMSE는 오차를 제곱하므로 큰 오차에 더 큰 페널티를 부여합니다.
+- 값이 작을수록 모델의 예측이 실제값에 더 가깝다는 것을 의미한다.
+- RMSE는 오차를 제곱하므로 큰 오차에 더 큰 페널티를 부여한다.
 
 
 #### R² : 결정 계수
 - R² = 1 :  완벽한 예측.
-- R² = 0 :  모델이 실제값의 평균만큼도 예측하지 못함
-- R² < 0 : 모델이 실제값 평균보다도 예측이 나쁨.
-- Overfitting 확인:훈련 데이터 R² 값이 높고, 테스트 데이터 R² 값이 낮으면 모델이 과적합(overfitting) 되었을 가능성이 있습니다.
-- Underfitting 확인: 두 값 모두 낮으면 모델이 과소적합(underfitting) 되었을 가능성이 있습니다.
+- R² = 0 :  모델이 실제값의 평균만큼도 예측하지 못함.
+- R² < 0 : 모델이 실제값의 평균보다 예측값이 나쁨.
+- Overfitting 확인:훈련 데이터 R² 값이 높고, 테스트 데이터 R² 값이 낮으면 모델이 과적합(overfitting) 되었을 가능성이 있다.
+- Underfitting 확인: 두 값 모두 낮으면 모델이 과소적합(underfitting) 되었을 가능성이 있다.
 
