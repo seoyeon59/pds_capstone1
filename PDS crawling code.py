@@ -1,4 +1,4 @@
-#라이브러리
+# 라이브러리 불러오기
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -91,7 +91,7 @@ for car_sell in website_list:
     # 차종 200종이 되면 멈추기
     if car_number == 200:
         break
-    # print(car_herf)
+    # print(car_herf) # 결과 출력력
 
 ## history부분
 ages = []  # 연식
@@ -121,7 +121,7 @@ for cars in car_herf:
     # 'div.at-glance > div.section-data > div > p.subtitle')
     elements = soup.select('div.at-glance > div.section-data > div > div:nth-child(5) p.subtitle')
     if elements:
-    # 결과 리스트에 추가
+    # 결과를 리스트에 추가
         p_element = elements.get_text(strip=True)
         insurance_list.append(p_element)
     # 결과가 없으면 "Null" 추가
@@ -201,4 +201,4 @@ result_df = pd.concat([specs_vans_df, history_df, name_price_mile_df], axis=1)
 print(result_df)
 
 # csv 파일로 만들기
-result_df.to_csv('crawling_truck.csv')
+result_df.to_csv('crawling_truck.csv') # 파일명 : crawling_차종.csv
