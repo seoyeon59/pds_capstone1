@@ -18,8 +18,9 @@
 
 전민경 (서울여대 데이터사이언스학과 2022111159)
 
-### 발전 내용
-기존에는 heatmap을 이용하여 상관관계만 나타내었습니다. 이에 더 발전하여 상관계수가 높은 것끼리 산점도로 나타냈으며, 여러 모델링(선형회귀모델(LineerRegression,Ridge,Lasso), 회귀모델 성능향상을 위한 앙상블(XGBRegressor, LGBMRegressor))을 진행하였다
+
+### 💻발전 내용
+기존에는 heatmap을 이용하여 상관관계만 나타내었다. 이에 더 발전하여 상관계수가 높은 것끼리 산점도로 나타냈으며, 여러 모델링(선형회귀모델(LineerRegression,Ridge,Lasso), 회귀모델 성능향상을 위한 앙상블(XGBRegressor, LGBMRegressor))을 진행하였다
 
 ---
 ### clawler 요약 설명
@@ -45,7 +46,6 @@
 
 #### preprocessing_code_3 : 세 번째 단계 (이전 단계까지 전처리를 완료한 파일들을 힙침)
 1. csv 파일에 프로젝트와 필요없는 컬럼을 제거하고 각 파일에 차종 열을 추가해 준 후 모든 파일들을 합쳐 'all_cars.csv' 파일로 저장한다.
-
 
 ---
 ### resouse 요약 설명
