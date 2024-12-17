@@ -103,3 +103,6 @@ preprocessing_resource는 전처리를 단계별로 한 파일들이 다 존재�
 - Overfitting 확인: 훈련 데이터 R² 값이 높고, 테스트 데이터 R² 값이 낮으면 모델이 과적합(overfitting) 되었을 가능성이 있다.
 - Underfitting 확인: 두 값 모두 낮으면 모델이 과소적합(underfitting) 되었을 가능성이 있다.
 
+'''python
+print(test)
+'''
